@@ -8,7 +8,6 @@
 <title>Voyages Farah</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -20,15 +19,24 @@
 <img src="logo.png" alt="Voyages Farah">
 </div>
 
-<nav>
 
+<nav>
 <ul>
 <li><a href="#">الرئيسية</a></li>
-<li><a href="#">الأسعار</a></li>
-<li><a href="#">الحجز</a></li>
-<li><a href="#">اتصل بنا</a></li>
-</ul>
 
+<li><a href="#" onclick="showInfo('prices')">
+الأسعار
+</a></li>
+
+<li><a href="#" onclick="showInfo('booking')">
+الحجز
+</a></li>
+
+<li><a href="#" onclick="showInfo('contact')">
+اتصل بنا
+</a></li>
+
+</ul>
 </nav>
 
 </header>
@@ -37,7 +45,9 @@
 
 <section class="hero">
 
-<img src="bus.png" alt="Bus">
+
+<img src="bus.png" alt="Voyages Farah Bus">
+
 
 <div class="hero-text">
 
@@ -47,9 +57,11 @@
 سافر براحة، أمان، واحترام للمواعيد
 </p>
 
-<a class="btn" href="#">
+
+<a href="#" class="btn" onclick="showInfo('booking')">
 احجز الآن
 </a>
+
 
 </div>
 
@@ -57,8 +69,6 @@
 
 
 
-
-<!-- بطاقة الرحلة الاحترافية -->
 
 <section class="trip-card">
 
@@ -74,6 +84,7 @@ Voyages Farah
 
 
 <div class="line"></div>
+
 
 
 <div class="trip-info">
@@ -113,7 +124,6 @@ Voyages Farah
 
 
 
-
 <section class="buttons">
 
 
@@ -142,7 +152,6 @@ Voyages Farah
 
 
 
-
 <footer>
 
 <p>
@@ -160,47 +169,90 @@ Voyages Farah
 
 function showInfo(type){
 
+
 let box=document.getElementById("infoBox");
+
 
 
 if(type==="prices"){
 
-box.innerHTML=
-`
-<h3>الأسعار</h3>
-<p>سيتم عرض أسعار الرحلات هنا</p>
+
+box.innerHTML=`
+
+<h3>💰 الأسعار</h3>
+
+<p>
+سيتم عرض أسعار الرحلات حسب المدن هنا
+</p>
+
 `;
 
 }
+
 
 
 
 if(type==="booking"){
 
-box.innerHTML=
-`
-<h3>الحجز</h3>
-<p>لحجز مكانكم المرجو التواصل معنا</p>
+
+box.innerHTML=`
+
+<h3>🎫 الحجز</h3>
+
+<p>
+لحجز مكانكم المرجو التواصل معنا
+</p>
+
+<p>
+💬 واتساب: رقم الواتساب
+</p>
+
+<p>
+📞 مكالمة: رقم الهاتف
+</p>
+
 `;
 
 }
+
 
 
 
 if(type==="contact"){
 
-box.innerHTML=
-`
-<h3>اتصل بنا</h3>
-<p>اختار طريقة التواصل</p>
+
+box.innerHTML=`
+
+<h3>📞 اتصل بنا</h3>
+
+<p>
+اختار طريقة التواصل:
+</p>
+
+<p>
+📞 مكالمة هاتفية
+</p>
+
+<p>
+💬 واتساب
+</p>
+
 `;
 
 }
 
 
+
 box.style.display="block";
 
+
+box.scrollIntoView({
+behavior:"smooth"
+});
+
+
 }
+
 
 
 </script>
