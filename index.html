@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -17,65 +18,119 @@
     <nav>
         <ul>
             <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">الوجهات</a></li>
-            <li><a href="#">الحجز</a></li>
-            <li><a href="#">الأسعار</a></li>
-            <li><a href="#">اتصل بنا</a></li>
+            <li><a href="#prices">الأسعار</a></li>
+            <li><a href="#booking">الحجز</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
         </ul>
     </nav>
 </header>
 
+
 <section class="hero">
+
     <img src="bus.png" alt="Voyages Farah Bus">
 
     <div class="hero-text">
         <h1>Voyages Farah</h1>
         <p>سافر براحة، أمان، واحترام للمواعيد</p>
 
-        <a href="#" class="btn">
+        <a href="#booking" class="btn">
             احجز الآن
         </a>
     </div>
+
 </section>
 
-<section class="destinations">
-    <h2>وجهاتنا</h2>
 
-    <div class="cards">
-        <div class="card">الدار البيضاء</div>
-        <div class="card">مراكش</div>
-        <div class="card">ورزازات</div>
-        <div class="card">زاكورة</div>
-    </div>
-</section>
+<section class="trip-card">
 
-<section class="trips">
-    <h2>الرحلات والأوقات</h2>
+    <h2>الدار البيضاء ➜ زاكورة</h2>
 
-    <div class="trip-card">
-        <h3>الدار البيضاء - زاكورة</h3>
+    <div class="features">
 
-        <p>🚌 حافلات مجهزة بـ:</p>
-        <ul>
-            <li>❄️ مكيف هوائي (Climatisation)</li>
-            <li>💺 مقاعد مريحة</li>
-            <li>🧳 مكان مخصص للأمتعة</li>
-        </ul>
-
-        <p>📍 الانطلاق: الدار البيضاء (كازا)</p>
-        <p>🕖 وقت الانطلاق: 07:00 مساءً</p>
-
-        <p>📍 الوصول: زاكورة</p>
-        <p>🕥 وقت الوصول: 10:30 مساءً</p>
+        <span>❄️ مكيف هوائي</span>
+        <span>💺 مقاعد مريحة</span>
+        <span>🧳 مكان للأمتعة</span>
 
     </div>
+
+    <div class="time">
+
+        <p>🕖 الانطلاق: 07:00 مساءً</p>
+        <p>🕥 الوصول: 10:30 مساءً</p>
+
+    </div>
+
 </section>
+
+
+<section class="buttons">
+
+    <button onclick="showInfo('prices')">💰 الأسعار</button>
+
+    <button onclick="showInfo('booking')">🎫 الحجز</button>
+
+    <button onclick="showInfo('contact')">📞 اتصل بنا</button>
+
+</section>
+
+
+<div id="infoBox" class="info-box">
+
+</div>
+
 
 <footer>
-    <p>© 2026 Voyage Farah - جميع الحقوق محفوظة.</p>
+    <p>© 2026 Voyages Farah - جميع الحقوق محفوظة.</p>
 </footer>
 
-<script src="script.js"></script>
+
+<script>
+
+function showInfo(type){
+
+let box = document.getElementById("infoBox");
+
+
+if(type === "prices"){
+
+box.innerHTML = `
+<h3>الأسعار</h3>
+<p>سيتم عرض أسعار الرحلات هنا</p>
+`;
+
+}
+
+
+if(type === "booking"){
+
+box.innerHTML = `
+<h3>الحجز</h3>
+<p>لحجز مكانكم المرجو التواصل معنا عبر الرقم التالي:</p>
+<p>💬 واتساب: رقم الواتساب</p>
+<p>📞 مكالمة: رقم الهاتف</p>
+`;
+
+}
+
+
+if(type === "contact"){
+
+box.innerHTML = `
+<h3>اتصل بنا</h3>
+<p>اختار طريقة التواصل:</p>
+<p>📞 مكالمة هاتفية</p>
+<p>💬 واتساب</p>
+`;
+
+}
+
+box.style.display="block";
+
+}
+
+</script>
+
 
 </body>
 </html>
