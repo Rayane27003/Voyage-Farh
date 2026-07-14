@@ -2,13 +2,28 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Voyages Farah</title>
+
+<title>Voyages Farah - كازا مراكش ورزازات زاكورة</title>
+
+
+<meta name="description" content="Voyages Farah شركة نقل المسافرين بين الدار البيضاء ومراكش وورزازات وزاكورة. رحلات مريحة، آمنة ومكيفة.">
+
+
+<meta name="keywords" content="Voyages Farah, سفر كازا زاكورة, الدار البيضاء زاكورة, مراكش ورزازات, نقل المسافرين">
+
+
+<meta name="author" content="Voyages Farah">
+
 
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
@@ -21,41 +36,47 @@
 
 
 <nav>
+
 <ul>
+
 <li><a href="#">الرئيسية</a></li>
 
-<li><a href="#" onclick="showInfo('prices')">
-الأسعار
-</a></li>
+<li><a href="#" onclick="showInfo('prices')">الأسعار</a></li>
 
-<li><a href="#" onclick="showInfo('booking')">
-الحجز
-</a></li>
+<li><a href="#" onclick="showInfo('booking')">الحجز</a></li>
 
-<li><a href="#" onclick="showInfo('contact')">
-اتصل بنا
-</a></li>
+<li><a href="#" onclick="showInfo('contact')">اتصل بنا</a></li>
 
 </ul>
+
 </nav>
 
 </header>
 
 
 
+
 <section class="hero">
 
 
-<img src="bus.png" alt="Voyages Farah Bus">
+<img src="bus.png" alt="حافلة Voyages Farah للنقل">
 
 
 <div class="hero-text">
 
+
 <h1>Voyages Farah</h1>
+
+
+<p>
+رحلات النقل بين الدار البيضاء، مراكش، ورزازات وزاكورة
+</p>
+
 
 <p>
 سافر براحة، أمان، واحترام للمواعيد
 </p>
+
 
 
 <a href="#" class="btn" onclick="showInfo('booking')">
@@ -65,7 +86,10 @@
 
 </div>
 
+
 </section>
+
+
 
 
 
@@ -78,9 +102,11 @@ Voyages Farah
 </div>
 
 
+
 <h2>
 الدار البيضاء ➜ مراكش ➜ ورزازات ➜ زاكورة
 </h2>
+
 
 
 <div class="line"></div>
@@ -91,24 +117,36 @@ Voyages Farah
 
 
 <div>
+
 <span>🕖</span>
+
 <p>الانطلاق من الدار البيضاء</p>
+
 <strong>07:00 مساءً</strong>
+
 </div>
+
 
 
 <div>
+
 <span>🕥</span>
-<p>الوصول الى زاكورة</p>
+
+<p>الوصول إلى زاكورة</p>
+
 <strong>10:30 مساءً</strong>
+
 </div>
 
 
+
 </div>
+
 
 
 
 <div class="features">
+
 
 <span>❄️ مكيف هوائي</span>
 
@@ -116,10 +154,13 @@ Voyages Farah
 
 <span>🧳 مكان للأمتعة</span>
 
+
 </div>
 
 
 </section>
+
+
 
 
 
@@ -132,9 +173,11 @@ Voyages Farah
 </button>
 
 
+
 <button onclick="showInfo('booking')">
 🎫 الحجز
 </button>
+
 
 
 <button onclick="showInfo('contact')">
@@ -142,12 +185,16 @@ Voyages Farah
 </button>
 
 
+
 </section>
 
 
 
 
+
+
 <div id="infoBox" class="info-box"></div>
+
 
 
 
@@ -159,6 +206,8 @@ Voyages Farah
 </p>
 
 </footer>
+
+
 
 
 
@@ -176,7 +225,6 @@ let box=document.getElementById("infoBox");
 
 if(type==="prices"){
 
-
 box.innerHTML=`
 
 <h3>💰 الأسعار</h3>
@@ -188,7 +236,6 @@ box.innerHTML=`
 `;
 
 }
-
 
 
 
@@ -247,7 +294,9 @@ box.style.display="block";
 
 
 box.scrollIntoView({
+
 behavior:"smooth"
+
 });
 
 
