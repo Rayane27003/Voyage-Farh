@@ -1,127 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voyages Farah</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyages Farah</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-}
-
-header{
-background:#111;
-padding:20px;
-text-align:center;
-}
-
-header img{
-width:250px;
-max-width:90%;
-}
-
-.hero{
-height:100vh;
-background:url('bus.jpg') center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.overlay{
-background:rgba(0,0,0,.6);
-padding:40px;
-border-radius:15px;
-text-align:center;
-color:white;
-}
-
-.overlay h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.overlay p{
-font-size:22px;
-margin-bottom:20px;
-}
-
-.btn{
-background:#21c7a8;
-padding:15px 30px;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:20px;
-}
-
-.section{
-padding:60px 20px;
-text-align:center;
-}
-
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.card{
-background:white;
-padding:25px;
-width:220px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
-font-size:22px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<img src="logo.png" alt="Voyages Farah">
+    <div class="logo">
+        <img src="logo.png" alt="Voyages Farah Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">الوجهات</a></li>
+            <li><a href="#">الحجز</a></li>
+            <li><a href="#">الأسعار</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-<div class="overlay">
-<h1>Voyages Farah</h1>
-<p>مرحباً بكم في شركة فوياج فرح</p>
-<p>الدار البيضاء • مراكش • ورزازات • زاكورة</p>
-<a class="btn" href="#">احجز الآن</a>
-</div>
+    <img src="bus.png" alt="Voyages Farah Bus">
+
+    <div class="hero-text">
+        <h1>Voyages Farah</h1>
+        <p>سافر براحة، أمان، واحترام للمواعيد</p>
+
+        <a href="#" class="btn">
+            احجز الآن
+        </a>
+    </div>
 </section>
 
-<section class="section">
-<h2>وجهاتنا</h2>
-<br><br>
-<div class="cards">
-<div class="card">الدار البيضاء</div>
-<div class="card">مراكش</div>
-<div class="card">ورزازات</div>
-<div class="card">زاكورة</div>
-</div>
+<section class="destinations">
+    <h2>وجهاتنا</h2>
+
+    <div class="cards">
+        <div class="card">الدار البيضاء</div>
+        <div class="card">مراكش</div>
+        <div class="card">ورزازات</div>
+        <div class="card">زاكورة</div>
+    </div>
 </section>
 
 <footer>
-© 2026 Voyages Farah - جميع الحقوق محفوظة
+    <p>© 2026 Voyage Farah - جميع الحقوق محفوظة.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
