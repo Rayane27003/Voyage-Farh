@@ -6,10 +6,13 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#f4f4f4;
+    background:#f3f3f3;
     color:#222;
     direction:rtl;
 }
+
+
+/* الهيدر */
 
 header{
     background:#0d0d0d;
@@ -32,22 +35,17 @@ nav ul{
     gap:25px;
 }
 
-nav ul li a{
-    text-decoration:none;
+nav a{
     color:white;
+    text-decoration:none;
     font-size:18px;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#18c58f;
 }
 
 
-/* الصفحة الرئيسية */
+/* الواجهة */
 
 .hero{
-    min-height:90vh;
+    min-height:80vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -61,167 +59,231 @@ nav ul li a:hover{
 .hero img{
     width:520px;
     max-width:100%;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-.hero-text{
-    max-width:500px;
+    border-radius:20px;
 }
 
 .hero-text h1{
     font-size:52px;
-    margin-bottom:20px;
 }
 
 .hero-text p{
     font-size:22px;
-    line-height:1.7;
-    margin-bottom:30px;
+    margin:25px 0;
 }
 
 .btn{
-    display:inline-block;
     background:#18c58f;
     color:white;
-    text-decoration:none;
     padding:15px 35px;
-    border-radius:8px;
-    font-size:20px;
+    border-radius:10px;
+    text-decoration:none;
 }
 
 
 /* بطاقة الرحلة */
 
 .trip-card{
+
     width:90%;
-    max-width:750px;
+    max-width:800px;
+
     margin:60px auto;
+
     background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
     border-top:6px solid #18c58f;
+
 }
+
+
+
+.company-name{
+
+    text-align:right;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    font-family:Georgia,serif;
+
+    color:#0d0d0d;
+
+    margin-bottom:25px;
+
+}
+
+
 
 .trip-card h2{
+
+    text-align:center;
+
     font-size:32px;
+
     margin-bottom:25px;
+
 }
+
+
+
+.line{
+
+    height:2px;
+
+    background:#18c58f;
+
+    margin:25px 0;
+
+}
+
+
+
+.trip-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    text-align:center;
+
+}
+
+
+
+.trip-info span{
+
+    font-size:30px;
+
+}
+
+
+.trip-info p{
+
+    margin:10px;
+
+    font-size:18px;
+
+}
+
+
 
 .features{
+
     display:flex;
+
     justify-content:center;
-    flex-wrap:wrap;
+
     gap:15px;
-    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
 }
+
+
 
 .features span{
-    background:#18c58f;
+
+    background:#0d0d0d;
+
     color:white;
+
     padding:12px 20px;
+
     border-radius:30px;
-    font-size:17px;
+
 }
 
-.time p{
-    font-size:20px;
-    margin:12px;
-}
 
 
 /* الأزرار */
 
 .buttons{
+
     display:flex;
+
     justify-content:center;
+
     gap:20px;
+
     flex-wrap:wrap;
-    margin:40px 20px;
+
 }
+
+
 
 .buttons button{
-    background:#0d0d0d;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
 
-.buttons button:hover{
     background:#18c58f;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
 }
 
 
-/* البطاقة التي تظهر بعد الضغط */
+
+/* المعلومات */
 
 .info-box{
+
     display:none;
+
     width:90%;
-    max-width:650px;
+
+    max-width:600px;
+
     margin:30px auto;
+
     background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-    border-top:6px solid #18c58f;
-}
 
-.info-box h3{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.info-box p{
-    font-size:19px;
-    line-height:2;
-}
-
-
-/* الوجهات */
-
-.destinations{
-    padding:80px 20px;
-    text-align:center;
-}
-
-.destinations h2{
-    font-size:40px;
-    margin-bottom:40px;
-}
-
-.cards{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-}
-
-.card{
-    width:240px;
-    background:white;
-    border-radius:15px;
     padding:30px;
-    font-size:22px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 }
 
 
-/* النهاية */
+
+/* الفوتر */
 
 footer{
+
     background:#111;
+
     color:white;
+
     text-align:center;
+
     padding:25px;
+
     margin-top:60px;
+
 }
+
 
 
 /* الهاتف */
@@ -229,25 +291,36 @@ footer{
 @media(max-width:900px){
 
 header{
-    flex-direction:column;
-    gap:20px;
+
+flex-direction:column;
+
+gap:20px;
+
 }
+
 
 nav ul{
-    flex-direction:column;
-    text-align:center;
+
+flex-direction:column;
+
+text-align:center;
+
 }
+
 
 .hero{
-    padding:30px;
+
+padding:30px;
+
 }
 
-.hero-text h1{
-    font-size:38px;
-}
 
-.hero-text p{
-    font-size:18px;
+.trip-info{
+
+flex-direction:column;
+
+gap:20px;
+
 }
 
 }
