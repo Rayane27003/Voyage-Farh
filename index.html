@@ -7,33 +7,27 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>Voyages Farah - كازا مراكش ورزازات زاكورة</title>
-
 
 <meta name="description" content="Voyages Farah شركة نقل المسافرين بين الدار البيضاء ومراكش وورزازات وزاكورة. رحلات مريحة، آمنة ومكيفة.">
 
-
 <meta name="keywords" content="Voyages Farah, سفر كازا زاكورة, الدار البيضاء زاكورة, مراكش ورزازات, نقل المسافرين">
-
 
 <meta name="author" content="Voyages Farah">
 
+<link rel="icon" type="image/png" href="favicon.png">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
-
 
 <header>
 
 <div class="logo">
 <img src="logo.png" alt="Voyages Farah">
 </div>
-
 
 <nav>
 
@@ -53,151 +47,85 @@
 
 </header>
 
-
-
-
 <section class="hero">
-
 
 <img src="bus.png" alt="حافلة Voyages Farah للنقل">
 
-
 <div class="hero-text">
 
-
 <h1>Voyages Farah</h1>
-
 
 <p>
 رحلات النقل بين الدار البيضاء، مراكش، ورزازات وزاكورة
 </p>
 
-
 <p>
 سافر براحة، أمان، واحترام للمواعيد
 </p>
-
-
 
 <a href="#" class="btn" onclick="showInfo('booking')">
 احجز الآن
 </a>
 
-
 </div>
-
 
 </section>
 
-
-
-
-
-
 <section class="trip-card">
-
 
 <div class="company-name">
 Voyages Farah
 </div>
 
-
-
 <h2>
 الدار البيضاء ➜ مراكش ➜ ورزازات ➜ زاكورة
 </h2>
 
-
-
 <div class="line"></div>
-
-
 
 <div class="trip-info">
 
-
 <div>
-
 <span>🕖</span>
-
 <p>الانطلاق من الدار البيضاء</p>
-
 <strong>07:00 مساءً</strong>
-
 </div>
-
-
 
 <div>
-
 <span>🕥</span>
-
 <p>الوصول إلى زاكورة</p>
-
 <strong>10:30 مساءً</strong>
-
 </div>
 
-
-
 </div>
-
-
-
 
 <div class="features">
 
-
 <span>❄️ مكيف هوائي</span>
-
 <span>💺 مقاعد مريحة</span>
-
 <span>🧳 مكان للأمتعة</span>
-
 
 </div>
 
-
 </section>
 
-
-
-
-
-
 <section class="buttons">
-
 
 <button onclick="showInfo('prices')">
 💰 الأسعار
 </button>
 
-
-
 <button onclick="showInfo('booking')">
 🎫 الحجز
 </button>
-
-
 
 <button onclick="showInfo('contact')">
 📞 اتصل بنا
 </button>
 
-
-
 </section>
 
-
-
-
-
-
 <div id="infoBox" class="info-box"></div>
-
-
-
-
 
 <footer>
 
@@ -207,21 +135,11 @@ Voyages Farah
 
 </footer>
 
-
-
-
-
-
-
 <script>
-
 
 function showInfo(type){
 
-
 let box=document.getElementById("infoBox");
-
-
 
 if(type==="prices"){
 
@@ -230,17 +148,14 @@ box.innerHTML=`
 <h3>💰 الأسعار</h3>
 
 <p>
-320 درهم بالنسبة للمتنقل من مدينة الدار البيضاء الى مدينة زاكورة, اما المتنقل عبر المدن التي تمر عليها الحافلة (مراكش - ورزازات - أكدز - تينزولين) فتختلف الأسعار حسب المسافة بين المدينتين.
+320 درهم بالنسبة للمتنقل من مدينة الدار البيضاء إلى مدينة زاكورة، أما المتنقل عبر المدن التي تمر عليها الحافلة (مراكش - ورزازات - أكدز - تينزولين) فتختلف الأسعار حسب المسافة بين المدينتين.
 </p>
 
 `;
 
 }
 
-
-
 if(type==="booking"){
-
 
 box.innerHTML=`
 
@@ -262,11 +177,7 @@ box.innerHTML=`
 
 }
 
-
-
-
 if(type==="contact"){
-
 
 box.innerHTML=`
 
@@ -288,25 +199,15 @@ box.innerHTML=`
 
 }
 
-
-
 box.style.display="block";
 
-
 box.scrollIntoView({
-
 behavior:"smooth"
-
 });
-
 
 }
 
-
-
 </script>
-
-
 
 </body>
 
