@@ -1,180 +1,362 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f3f3f3;
-    color:#222;
-    direction:rtl;
+html{
+    scroll-behavior:smooth;
 }
 
+body{
+    font-family:Arial,sans-serif;
+    direction:rtl;
+    background:#eef3f7;
+    color:#222;
+    overflow-x:hidden;
+}
 
-/* الهيدر */
+/* ===========================
+   HEADER
+=========================== */
 
 header{
-    background:#0d0d0d;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 50px;
-    position:sticky;
-    top:0;
-    z-index:10;
+
+    padding:18px 60px;
+
+    background:rgba(10,20,25,.92);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+
 }
 
 .logo img{
-    width:180px;
+
+    width:190px;
+
+    transition:.4s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
+
 }
 
 nav ul{
+
     list-style:none;
+
     display:flex;
-    gap:25px;
+
+    gap:28px;
+
 }
 
 nav a{
+
     color:white;
+
     text-decoration:none;
+
     font-size:18px;
-}
-
-
-/* الواجهة */
-
-.hero{
-    min-height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:60px;
-    padding:60px;
-    background:linear-gradient(135deg,#0b1622,#1d3557);
-    color:white;
-    flex-wrap:wrap;
-}
-
-.hero img{
-    width:520px;
-    max-width:100%;
-    border-radius:20px;
-}
-
-.hero-text h1{
-    font-size:52px;
-}
-
-.hero-text p{
-    font-size:22px;
-    margin:25px 0;
-}
-
-.btn{
-    background:#18c58f;
-    color:white;
-    padding:15px 35px;
-    border-radius:10px;
-    text-decoration:none;
-}
-
-
-/* بطاقة الرحلة */
-
-.trip-card{
-
-    width:90%;
-    max-width:800px;
-
-    margin:60px auto;
-
-    background:white;
-
-    padding:40px;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-    border-top:6px solid #18c58f;
-
-}
-
-
-
-.company-name{
-
-    text-align:right;
-
-    font-size:28px;
 
     font-weight:bold;
 
-    font-family:Georgia,serif;
+    transition:.35s;
 
-    color:#0d0d0d;
-
-    margin-bottom:25px;
+    position:relative;
 
 }
 
+nav a:hover{
 
+    color:#20d68c;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+    right:0;
+
+    width:0;
+
+    height:3px;
+
+    background:#20d68c;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    padding:70px;
+
+    background:
+    linear-gradient(140deg,#071018,#12304c);
+
+    color:white;
+
+    flex-wrap:wrap;
+
+}
+
+.hero img{
+
+    width:560px;
+
+    max-width:100%;
+
+    border-radius:25px;
+
+    filter:drop-shadow(0 20px 30px rgba(0,0,0,.45));
+
+    transition:.5s;
+
+}
+
+.hero img:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.hero-text{
+
+    max-width:520px;
+
+}
+
+.hero-text h1{
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+    color:#20d68c;
+
+}
+
+.hero-text p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+    color:#e7e7e7;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#20d68c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 38px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 10px 20px rgba(32,214,140,.35);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#15bf78;
+
+}
+/* ===========================
+   TRIP CARD
+=========================== */
+
+.trip-card{
+
+    width:92%;
+    max-width:950px;
+
+    margin:70px auto;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+    border:1px solid #e7ecef;
+
+    transition:.35s;
+
+}
+
+.trip-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.18);
+
+}
+
+.company-name{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#19b977;
+
+    margin-bottom:15px;
+
+}
 
 .trip-card h2{
 
     text-align:center;
 
-    font-size:32px;
+    font-size:34px;
+
+    color:#111;
 
     margin-bottom:25px;
 
 }
 
-
-
 .line{
 
-    height:2px;
+    width:100%;
 
-    background:#18c58f;
+    height:4px;
 
-    margin:25px 0;
+    background:linear-gradient(to left,#19b977,#4fe0aa);
+
+    border-radius:20px;
+
+    margin:30px 0;
 
 }
-
-
 
 .trip-info{
 
     display:flex;
 
-    justify-content:center;
+    justify-content:space-around;
 
-    gap:80px;
+    align-items:center;
+
+    gap:35px;
 
     text-align:center;
 
+    flex-wrap:wrap;
+
 }
 
+.trip-info div{
 
+    background:#f8fafb;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    min-width:220px;
+
+    transition:.35s;
+
+}
+
+.trip-info div:hover{
+
+    background:#19b977;
+
+    color:white;
+
+    transform:translateY(-6px);
+
+}
 
 .trip-info span{
 
-    font-size:30px;
+    font-size:40px;
+
+    display:block;
+
+    margin-bottom:12px;
 
 }
-
 
 .trip-info p{
 
-    margin:10px;
-
     font-size:18px;
+
+    margin-bottom:10px;
 
 }
 
+.trip-info strong{
 
+    font-size:22px;
+
+}
 
 .features{
 
@@ -182,33 +364,43 @@ nav a{
 
     justify-content:center;
 
-    gap:15px;
+    gap:18px;
 
     flex-wrap:wrap;
 
-    margin-top:30px;
+    margin-top:40px;
 
 }
-
-
 
 .features span{
 
-    background:#0d0d0d;
+    background:#19b977;
 
     color:white;
 
-    padding:12px 20px;
+    padding:14px 24px;
 
-    border-radius:30px;
+    border-radius:50px;
+
+    font-size:17px;
+
+    transition:.3s;
 
 }
 
+.features span:hover{
 
+    background:#111;
 
-/* الأزرار */
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
 
 .buttons{
+
+    margin-top:50px;
 
     display:flex;
 
@@ -220,106 +412,315 @@ nav a{
 
 }
 
-
-
 .buttons button{
 
-    background:#18c58f;
+    background:linear-gradient(135deg,#19b977,#10a76b);
 
     color:white;
 
     border:none;
 
-    padding:15px 35px;
+    border-radius:14px;
 
-    border-radius:12px;
+    padding:16px 38px;
 
     font-size:18px;
 
+    font-weight:bold;
+
     cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(25,185,119,.30);
 
 }
 
+.buttons button:hover{
 
+    transform:translateY(-5px);
 
-/* المعلومات */
+    background:#111;
+
+}
+
+/* ===========================
+   INFO BOX
+=========================== */
 
 .info-box{
 
     display:none;
 
-    width:90%;
+    width:92%;
 
-    max-width:600px;
+    max-width:700px;
 
-    margin:30px auto;
+    margin:40px auto;
 
     background:white;
 
-    padding:30px;
+    border-radius:24px;
 
-    border-radius:20px;
+    padding:35px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+    line-height:2;
 
     text-align:center;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
 }
 
+.info-box h3{
 
+    color:#19b977;
 
-/* الفوتر */
+    margin-bottom:18px;
+
+    font-size:30px;
+
+}
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
-    background:#111;
+    margin-top:80px;
+
+    background:#071018;
 
     color:white;
 
     text-align:center;
 
-    padding:25px;
+    padding:35px 20px;
 
-    margin-top:60px;
+    font-size:16px;
+
+    letter-spacing:.5px;
 
 }
 
+/* ===========================
+   SCROLLBAR
+=========================== */
 
+::-webkit-scrollbar{
 
-/* الهاتف */
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e8ecef;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#19b977;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0f9c64;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.hero,
+.trip-card,
+.buttons,
+.info-box{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
 
 @media(max-width:900px){
 
 header{
 
-flex-direction:column;
+    flex-direction:column;
 
-gap:20px;
+    gap:18px;
+
+    padding:20px;
 
 }
 
+.logo img{
+
+    width:150px;
+
+}
 
 nav ul{
 
-flex-direction:column;
+    flex-direction:column;
 
-text-align:center;
+    align-items:center;
+
+    gap:15px;
 
 }
-
 
 .hero{
 
-padding:30px;
+    padding:40px 20px;
+
+    text-align:center;
+
+    justify-content:center;
 
 }
 
+.hero img{
+
+    width:100%;
+
+    max-width:420px;
+
+}
+
+.hero-text h1{
+
+    font-size:42px;
+
+}
+
+.hero-text p{
+
+    font-size:19px;
+
+}
+
+.trip-card{
+
+    padding:28px;
+
+}
+
+.trip-card h2{
+
+    font-size:26px;
+
+}
 
 .trip-info{
 
-flex-direction:column;
+    flex-direction:column;
 
-gap:20px;
+}
+
+.trip-info div{
+
+    width:100%;
+
+}
+
+.features{
+
+    gap:12px;
+
+}
+
+.features span{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.buttons button{
+
+    width:90%;
+
+}
+
+.info-box{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.hero-text h1{
+
+    font-size:34px;
+
+}
+
+.hero-text p{
+
+    font-size:17px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.company-name{
+
+    font-size:24px;
+
+}
+
+.trip-card h2{
+
+    font-size:22px;
 
 }
 
