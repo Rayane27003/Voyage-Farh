@@ -57,13 +57,12 @@ header{
 
 
 nav ul{
-
     list-style:none;
-
     display:flex;
-
     gap:28px;
-
+    flex-direction:row;
+    align-items:center;
+    padding:0;
 }
 
 nav a{
