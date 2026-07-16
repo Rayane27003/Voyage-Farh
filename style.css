@@ -218,156 +218,134 @@ nav a:hover::after{
     background:#15bf78;
 
 }
-/* ===========================
-   TRIP CARD
-=========================== */
+/* ===== بطاقة الرحلة الجديدة ===== */
 
 .trip-card{
-
-    width:92%;
-    max-width:950px;
-
-    margin:70px auto;
-
-    background:#ffffff;
-
-    border-radius:28px;
-
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    background:linear-gradient(135deg,#08141d,#132c38);
+    border-radius:35px;
     padding:45px;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.12);
-
-    border:1px solid #e7ecef;
-
-    transition:.35s;
-
-}
-
-.trip-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 22px 45px rgba(0,0,0,.18);
-
-}
-
-.company-name{
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    color:#19b977;
-
-    margin-bottom:15px;
-
-}
-
-.trip-card h2{
-
-    text-align:center;
-
-    font-size:34px;
-
-    color:#111;
-
-    margin-bottom:25px;
-
-}
-
-.line{
-
-    width:100%;
-
-    height:4px;
-
-    background:linear-gradient(to left,#19b977,#4fe0aa);
-
-    border-radius:20px;
-
-    margin:30px 0;
-
-}
-
-.trip-info{
-
-    display:flex;
-
-    justify-content:space-around;
-
-    align-items:center;
-
-    gap:35px;
-
-    text-align:center;
-
-    flex-wrap:wrap;
-
-}
-
-.trip-info div{
-
-    background:#f8fafb;
-
-    padding:25px;
-
-    border-radius:18px;
-
-    min-width:220px;
-
-    transition:.35s;
-
-}
-
-.trip-info div:hover{
-
-    background:#19b977;
-
     color:white;
-
-    transform:translateY(-6px);
-
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    overflow:hidden;
 }
 
-.trip-info span{
-
-    font-size:40px;
-
-    display:block;
-
-    margin-bottom:12px;
-
+.trip-header{
+    text-align:center;
 }
 
-.trip-info p{
-
-    font-size:18px;
-
-    margin-bottom:10px;
-
+.trip-header h2{
+    color:#35d67d;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
-.trip-info strong{
-
-    font-size:22px;
-
+.trip-header p{
+    font-size:30px;
+    font-weight:bold;
 }
 
-.features{
+.trip-line{
+    width:100%;
+    height:4px;
+    background:#35d67d;
+    border-radius:10px;
+    margin:35px 0;
+}
 
+.trip-times{
     display:flex;
-
-    justify-content:center;
-
-    gap:18px;
-
+    justify-content:space-evenly;
+    gap:30px;
     flex-wrap:wrap;
-
-    margin-top:40px;
-
 }
 
-.features span{
+.time-box{
+    background:white;
+    color:#222;
+    width:320px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.time-box .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.time-box h3{
+    color:#18c58f;
+    margin-bottom:10px;
+}
+
+.time-box span{
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.time-box small{
+    font-size:18px;
+    color:#666;
+}
+
+.trip-features{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
+
+.feature{
+    background:#18c58f;
+    color:white;
+    padding:15px 28px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.trip-button{
+    text-align:center;
+}
+
+.trip-button button{
+    background:#18c58f;
+    color:white;
+    border:none;
+    padding:18px 45px;
+    border-radius:50px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.trip-button button:hover{
+    background:#14a777;
+    transform:scale(1.05);
+}
+
+@media(max-width:900px){
+
+.trip-header h2{
+    font-size:32px;
+}
+
+.trip-header p{
+    font-size:22px;
+}
+
+.time-box{
+    width:100%;
+}
+
+}
 
     background:#19b977;
 
