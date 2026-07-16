@@ -330,6 +330,12 @@ nav a:hover::after{
     background:#14a777;
     transform:scale(1.05);
 }
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+}
 
 @media(max-width:900px){
 
