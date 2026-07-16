@@ -25,7 +25,6 @@ body{
 =========================== */
 
 header{
-
     position:sticky;
     top:0;
     z-index:999;
@@ -34,21 +33,20 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:8px 40px;
+    padding:6px 30px;
+    height:75px;
 
     background:rgba(10,20,25,.92);
-
     backdrop-filter:blur(14px);
-
     box-shadow:0 8px 30px rgba(0,0,0,.25);
-
 }
 
 .logo img{
-    width:150px;
-    height:150px;
+    width:110px;
+    height:auto;
     object-fit:contain;
     transition:.4s;
+    display:block;
 }
 
 .logo img:hover{
